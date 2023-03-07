@@ -7,7 +7,7 @@ cp loadimages.sh $WORK_DIR
 cp updatebg.sh $WORK_DIR
 
 cd ~/Pictures
-gsettings set org.gnome.desktop.background picture-uri "file://$PWD/BackgroundImage.jpg"
+mkdir bu
 
 cd ~/.background-update
 echo "cd $PWD" > process.sh
