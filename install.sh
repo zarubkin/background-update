@@ -17,7 +17,7 @@ echo "./updatebg.sh" >> process.sh
 chmod +x *.sh
 crontab -l > mycron
 NLB=$(cat mycron | sort | uniq | wc -l)
-echo "1 * * * * $PWD/process.sh" >> mycron
+echo "/10 * * * * cd $PWD && ./process.sh" >> mycron
 NLA=$(cat mycron | sort | uniq | wc -l)
 if [ $NLB -ne $NLA ]
 then
